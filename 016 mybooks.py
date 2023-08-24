@@ -26,7 +26,7 @@ class Bookdb:
         return rows
 
     def insert(self,title, author, isbn):
-        sql=("INSERT INTO books(title,author,isbn)VALUES (?,?,?)")
+        sql=("INSERT INTO books(title,author,isbn) VALUES (?,?,?)")
         values =[title,author,isbn]
         self.cursor.execute(sql,values)
         self.con.commit()
