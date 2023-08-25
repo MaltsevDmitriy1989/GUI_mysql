@@ -9,11 +9,11 @@ try:
         database='exam',
     ) as connection:
         print(connection)
-        select_query = "SELECT quest_num FROM t121_quest ORDER BY quest_num DESC LIMIT 1"
+        select_query = "SELECT * FROM t122_answer"
         with connection.cursor() as cursor:
             cursor.execute(select_query)
             for row in cursor.fetchall():
-                print(row[0])
-                print(type(row))
+                print(row)
+                # print(type(row))
 except Error as e:
     print(e)

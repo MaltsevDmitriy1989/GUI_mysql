@@ -18,44 +18,248 @@ class Start(QtWidgets.QMainWindow, testingsql.Ui_Dialog):
             )
         self.cursor = self.con.cursor()
         self.pushButton.clicked.connect(self.evt_click_view)
-        self.pushButton_2.clicked.connect(self.evt_click_add)
+        self.pushButton_2.clicked.connect(self.evt_click_ok)
         self.pushButton_3.clicked.connect(self.close)
         self.pushButton_4.clicked.connect(self.evt_click_clear)
+        self.pushButton_5.clicked.connect(self.evt_click_add)
+        self.pushButton_6.clicked.connect(self.evt_click_del)
         self.model = QStandardItemModel()
+        self.model2 = QStandardItemModel()
         self.listView.setModel(self.model)
+        self.listView_2.setModel(self.model2)
         self.st = []
+        self.st2 = []
+        self.quest_id = 1
+        self.answ_id = 1
         select_query = "SELECT quest_num FROM t121_quest ORDER BY quest_num DESC LIMIT 1"
         self.cursor.execute(select_query)
         for row in self.cursor.fetchall():
-            self.spinBox_2.setValue(int(row[0])+1)
-            self.spinBox_5.setValue(int(row[0])+1)
+            self.quest_id = int(row[0]) + 1
         select_query = "SELECT answer_num FROM t122_answer ORDER BY answer_num DESC LIMIT 1"
         self.cursor.execute(select_query)
         for row in self.cursor.fetchall():
             self.spinBox_9.setValue(int(row[0]) + 1)
+            self.answ_id = int(row[0]) + 1
+        # for i in range (1, 8):
+        #     self.textEdit_answ_[i].hide()
+        self.label_answ_1.hide()
+        self.label_answ_2.hide()
+        self.label_answ_3.hide()
+        self.label_answ_4.hide()
+        self.label_answ_5.hide()
+        self.label_answ_6.hide()
+        self.label_answ_7.hide()
+        self.label_answ_8.hide()
+        self.spinBox_answ_1.hide()
+        self.spinBox_answ_2.hide()
+        self.spinBox_answ_3.hide()
+        self.spinBox_answ_4.hide()
+        self.spinBox_answ_5.hide()
+        self.spinBox_answ_6.hide()
+        self.spinBox_answ_7.hide()
+        self.spinBox_answ_8.hide()
+        self.checkBox_answ_1.hide()
+        self.checkBox_answ_2.hide()
+        self.checkBox_answ_3.hide()
+        self.checkBox_answ_4.hide()
+        self.checkBox_answ_5.hide()
+        self.checkBox_answ_6.hide()
+        self.checkBox_answ_7.hide()
+        self.checkBox_answ_8.hide()
+        self.textEdit_answ_1.hide()
+        self.textEdit_answ_2.hide()
+        self.textEdit_answ_3.hide()
+        self.textEdit_answ_4.hide()
+        self.textEdit_answ_5.hide()
+        self.textEdit_answ_6.hide()
+        self.textEdit_answ_7.hide()
+        self.textEdit_answ_8.hide()
 
     def evt_click_view(self):
         if self.checkBox.isChecked() == True:
             select_query = "SELECT quest_text from T121_quest"
+            select_query2 = "SELECT answer_text from T122_answer"
         else:
             number = self.spinBox.value()
             select_query = f"SELECT quest_text from T121_quest where quest_num = {number}"
+            select_query2 = f"SELECT answer_text from T122_answer where quest_num = {number}"
         self.cursor.execute(select_query)
         for row in self.cursor.fetchall():
             self.st.append(str(row))
         for i in self.st:
             self.model.appendRow(QStandardItem(i))
+        self.cursor.execute(select_query2)
+        for row in self.cursor.fetchall():
+            self.st2.append(str(row))
+        for i in self.st2:
+            self.model2.appendRow(QStandardItem(i))
 
     def evt_click_clear(self):
         self.st = []
         self.model.clear()
+        self.model2.clear()
 
+
+    def evt_click_ok(self):
+        answer_kol = self.spinBox_8.value()
+        if answer_kol == 8:
+            self.label_answ_1.show()
+            self.label_answ_2.show()
+            self.label_answ_3.show()
+            self.label_answ_4.show()
+            self.label_answ_5.show()
+            self.label_answ_6.show()
+            self.label_answ_7.show()
+            self.label_answ_8.show()
+            self.spinBox_answ_1.show()
+            self.spinBox_answ_2.show()
+            self.spinBox_answ_3.show()
+            self.spinBox_answ_4.show()
+            self.spinBox_answ_5.show()
+            self.spinBox_answ_6.show()
+            self.spinBox_answ_7.show()
+            self.spinBox_answ_8.show()
+            self.checkBox_answ_1.show()
+            self.checkBox_answ_2.show()
+            self.checkBox_answ_3.show()
+            self.checkBox_answ_4.show()
+            self.checkBox_answ_5.show()
+            self.checkBox_answ_6.show()
+            self.checkBox_answ_7.show()
+            self.checkBox_answ_8.show()
+            self.textEdit_answ_1.show()
+            self.textEdit_answ_2.show()
+            self.textEdit_answ_3.show()
+            self.textEdit_answ_4.show()
+            self.textEdit_answ_5.show()
+            self.textEdit_answ_6.show()
+            self.textEdit_answ_7.show()
+            self.textEdit_answ_8.show()
+        elif answer_kol == 7:
+            self.label_answ_1.show()
+            self.label_answ_2.show()
+            self.label_answ_3.show()
+            self.label_answ_4.show()
+            self.label_answ_5.show()
+            self.label_answ_6.show()
+            self.label_answ_7.show()
+            self.spinBox_answ_1.show()
+            self.spinBox_answ_2.show()
+            self.spinBox_answ_3.show()
+            self.spinBox_answ_4.show()
+            self.spinBox_answ_5.show()
+            self.spinBox_answ_6.show()
+            self.spinBox_answ_7.show()
+            self.checkBox_answ_1.show()
+            self.checkBox_answ_2.show()
+            self.checkBox_answ_3.show()
+            self.checkBox_answ_4.show()
+            self.checkBox_answ_5.show()
+            self.checkBox_answ_6.show()
+            self.checkBox_answ_7.show()
+            self.textEdit_answ_1.show()
+            self.textEdit_answ_2.show()
+            self.textEdit_answ_3.show()
+            self.textEdit_answ_4.show()
+            self.textEdit_answ_5.show()
+            self.textEdit_answ_6.show()
+            self.textEdit_answ_7.show()
+        elif answer_kol == 6:
+            self.label_answ_1.show()
+            self.label_answ_2.show()
+            self.label_answ_3.show()
+            self.label_answ_4.show()
+            self.label_answ_5.show()
+            self.label_answ_6.show()
+            self.spinBox_answ_1.show()
+            self.spinBox_answ_2.show()
+            self.spinBox_answ_3.show()
+            self.spinBox_answ_4.show()
+            self.spinBox_answ_5.show()
+            self.spinBox_answ_6.show()
+            self.checkBox_answ_1.show()
+            self.checkBox_answ_2.show()
+            self.checkBox_answ_3.show()
+            self.checkBox_answ_4.show()
+            self.checkBox_answ_5.show()
+            self.checkBox_answ_6.show()
+            self.textEdit_answ_1.show()
+            self.textEdit_answ_2.show()
+            self.textEdit_answ_3.show()
+            self.textEdit_answ_4.show()
+            self.textEdit_answ_5.show()
+            self.textEdit_answ_6.show()
+        elif answer_kol == 5:
+            self.label_answ_1.show()
+            self.label_answ_2.show()
+            self.label_answ_3.show()
+            self.label_answ_4.show()
+            self.label_answ_5.show()
+            self.spinBox_answ_1.show()
+            self.spinBox_answ_2.show()
+            self.spinBox_answ_3.show()
+            self.spinBox_answ_4.show()
+            self.spinBox_answ_5.show()
+            self.checkBox_answ_1.show()
+            self.checkBox_answ_2.show()
+            self.checkBox_answ_3.show()
+            self.checkBox_answ_4.show()
+            self.checkBox_answ_5.show()
+            self.textEdit_answ_1.show()
+            self.textEdit_answ_2.show()
+            self.textEdit_answ_3.show()
+            self.textEdit_answ_4.show()
+            self.textEdit_answ_5.show()
+        elif answer_kol == 4:
+            self.label_answ_1.show()
+            self.label_answ_2.show()
+            self.label_answ_3.show()
+            self.label_answ_4.show()
+            self.spinBox_answ_1.show()
+            self.spinBox_answ_2.show()
+            self.spinBox_answ_3.show()
+            self.spinBox_answ_4.show()
+            self.checkBox_answ_1.show()
+            self.checkBox_answ_2.show()
+            self.checkBox_answ_3.show()
+            self.checkBox_answ_4.show()
+            self.textEdit_answ_1.show()
+            self.textEdit_answ_2.show()
+            self.textEdit_answ_3.show()
+            self.textEdit_answ_4.show()
+        elif answer_kol == 3:
+            self.label_answ_1.show()
+            self.label_answ_2.show()
+            self.label_answ_3.show()
+            self.spinBox_answ_1.show()
+            self.spinBox_answ_2.show()
+            self.spinBox_answ_3.show()
+            self.checkBox_answ_1.show()
+            self.checkBox_answ_2.show()
+            self.checkBox_answ_3.show()
+            self.textEdit_answ_1.show()
+            self.textEdit_answ_2.show()
+            self.textEdit_answ_3.show()
+        elif answer_kol == 2:
+            self.label_answ_1.show()
+            self.label_answ_2.show()
+            self.spinBox_answ_1.show()
+            self.spinBox_answ_2.show()
+            self.checkBox_answ_1.show()
+            self.checkBox_answ_2.show()
+            self.textEdit_answ_1.show()
+            self.textEdit_answ_2.show()
+        elif answer_kol == 1:
+            self.label_answ_1.show()
+            self.spinBox_answ_1.show()
+            self.checkBox_answ_1.show()
+            self.textEdit_answ_1.show()
 
     def evt_click_add(self):
-        quest_num = self.spinBox_2.value()
+        quest_num = self.quest_id
         baza_num = self.spinBox_3.value()
         disc_num = self.spinBox_4.value()
-        QuestID = self.spinBox_5.value()
+        QuestID = self.quest_id
         quest_type = self.spinBox_6.value()
         quest_lev = self.spinBox_7.value()
         answer_kol = self.spinBox_8.value()
@@ -65,6 +269,12 @@ class Start(QtWidgets.QMainWindow, testingsql.Ui_Dialog):
         values = [quest_num, baza_num, disc_num, QuestID, quest_type, quest_lev, answer_kol, quest_text]
         self.cursor.execute(sql, values)
         self.con.commit()
+        # answer_num, quest_num, AnswerID, answer_type, ok, answer_text, ans
+
+
+
+
+
 
 
 if __name__ == '__main__':

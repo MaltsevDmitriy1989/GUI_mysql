@@ -192,44 +192,6 @@
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QSpinBox" name="spinBox_2">
-   <property name="geometry">
-    <rect>
-     <x>180</x>
-     <y>550</y>
-     <width>71</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="readOnly">
-    <bool>true</bool>
-   </property>
-   <property name="minimum">
-    <number>1</number>
-   </property>
-   <property name="maximum">
-    <number>9999</number>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_4">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>550</y>
-     <width>141</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Times New Roman</family>
-     <pointsize>12</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>Номер вопроса</string>
-   </property>
-  </widget>
   <widget class="QSpinBox" name="spinBox_3">
    <property name="geometry">
     <rect>
@@ -300,49 +262,11 @@
     <number>9999</number>
    </property>
   </widget>
-  <widget class="QSpinBox" name="spinBox_5">
-   <property name="geometry">
-    <rect>
-     <x>180</x>
-     <y>640</y>
-     <width>71</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="readOnly">
-    <bool>true</bool>
-   </property>
-   <property name="minimum">
-    <number>1</number>
-   </property>
-   <property name="maximum">
-    <number>9999</number>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_7">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>640</y>
-     <width>141</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Times New Roman</family>
-     <pointsize>12</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>ID вопроса</string>
-   </property>
-  </widget>
   <widget class="QSpinBox" name="spinBox_6">
    <property name="geometry">
     <rect>
-     <x>180</x>
-     <y>670</y>
+     <x>420</x>
+     <y>580</y>
      <width>71</width>
      <height>22</height>
     </rect>
@@ -357,8 +281,8 @@
   <widget class="QLabel" name="label_8">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>670</y>
+     <x>270</x>
+     <y>580</y>
      <width>141</width>
      <height>21</height>
     </rect>
@@ -376,8 +300,8 @@
   <widget class="QLabel" name="label_9">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>700</y>
+     <x>270</x>
+     <y>610</y>
      <width>141</width>
      <height>21</height>
     </rect>
@@ -395,8 +319,8 @@
   <widget class="QSpinBox" name="spinBox_7">
    <property name="geometry">
     <rect>
-     <x>180</x>
-     <y>700</y>
+     <x>420</x>
+     <y>610</y>
      <width>71</width>
      <height>22</height>
     </rect>
@@ -412,7 +336,7 @@
    <property name="geometry">
     <rect>
      <x>180</x>
-     <y>730</y>
+     <y>640</y>
      <width>71</width>
      <height>22</height>
     </rect>
@@ -428,7 +352,7 @@
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>730</y>
+     <y>640</y>
      <width>141</width>
      <height>21</height>
     </rect>
@@ -447,7 +371,7 @@
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>760</y>
+     <y>670</y>
      <width>141</width>
      <height>21</height>
     </rect>
@@ -466,17 +390,17 @@
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>790</y>
+     <y>700</y>
      <width>491</width>
-     <height>71</height>
+     <height>171</height>
     </rect>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_2">
    <property name="geometry">
     <rect>
-     <x>450</x>
-     <y>880</y>
+     <x>460</x>
+     <y>910</y>
      <width>75</width>
      <height>23</height>
     </rect>
@@ -489,7 +413,7 @@
    <property name="geometry">
     <rect>
      <x>560</x>
-     <y>520</y>
+     <y>500</y>
      <width>501</width>
      <height>21</height>
     </rect>
@@ -511,7 +435,7 @@
    <property name="geometry">
     <rect>
      <x>760</x>
-     <y>550</y>
+     <y>530</y>
      <width>71</width>
      <height>22</height>
     </rect>
@@ -530,7 +454,7 @@
    <property name="geometry">
     <rect>
      <x>610</x>
-     <y>550</y>
+     <y>530</y>
      <width>141</width>
      <height>21</height>
     </rect>
@@ -545,11 +469,11 @@
     <string>Номер ответа</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_15">
+  <widget class="QLabel" name="label_answ_1">
    <property name="geometry">
     <rect>
      <x>570</x>
-     <y>590</y>
+     <y>570</y>
      <width>141</width>
      <height>21</height>
     </rect>
@@ -564,11 +488,11 @@
     <string>Тип ответа</string>
    </property>
   </widget>
-  <widget class="QSpinBox" name="spinBox_11">
+  <widget class="QSpinBox" name="spinBox_answ_1">
    <property name="geometry">
     <rect>
      <x>660</x>
-     <y>590</y>
+     <y>570</y>
      <width>41</width>
      <height>22</height>
     </rect>
@@ -580,11 +504,11 @@
     <number>99</number>
    </property>
   </widget>
-  <widget class="QCheckBox" name="checkBox_2">
+  <widget class="QCheckBox" name="checkBox_answ_1">
    <property name="geometry">
     <rect>
      <x>720</x>
-     <y>590</y>
+     <y>570</y>
      <width>131</width>
      <height>21</height>
     </rect>
@@ -599,21 +523,21 @@
     <string>Правильный</string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="textEdit_2">
+  <widget class="QTextEdit" name="textEdit_answ_1">
    <property name="geometry">
     <rect>
      <x>840</x>
-     <y>590</y>
+     <y>570</y>
      <width>271</width>
      <height>31</height>
     </rect>
    </property>
   </widget>
-  <widget class="QLabel" name="label_16">
+  <widget class="QLabel" name="label_answ_2">
    <property name="geometry">
     <rect>
      <x>570</x>
-     <y>630</y>
+     <y>610</y>
      <width>141</width>
      <height>21</height>
     </rect>
@@ -628,11 +552,11 @@
     <string>Тип ответа</string>
    </property>
   </widget>
-  <widget class="QSpinBox" name="spinBox_12">
+  <widget class="QSpinBox" name="spinBox_answ_2">
    <property name="geometry">
     <rect>
      <x>660</x>
-     <y>630</y>
+     <y>610</y>
      <width>41</width>
      <height>22</height>
     </rect>
@@ -644,11 +568,11 @@
     <number>99</number>
    </property>
   </widget>
-  <widget class="QCheckBox" name="checkBox_3">
+  <widget class="QCheckBox" name="checkBox_answ_2">
    <property name="geometry">
     <rect>
      <x>720</x>
-     <y>630</y>
+     <y>610</y>
      <width>131</width>
      <height>21</height>
     </rect>
@@ -663,21 +587,21 @@
     <string>Правильный</string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="textEdit_3">
+  <widget class="QTextEdit" name="textEdit_answ_2">
    <property name="geometry">
     <rect>
      <x>840</x>
-     <y>630</y>
+     <y>610</y>
      <width>271</width>
      <height>31</height>
     </rect>
    </property>
   </widget>
-  <widget class="QLabel" name="label_17">
+  <widget class="QLabel" name="label_answ_3">
    <property name="geometry">
     <rect>
      <x>570</x>
-     <y>670</y>
+     <y>650</y>
      <width>141</width>
      <height>21</height>
     </rect>
@@ -692,11 +616,11 @@
     <string>Тип ответа</string>
    </property>
   </widget>
-  <widget class="QSpinBox" name="spinBox_13">
+  <widget class="QSpinBox" name="spinBox_answ_3">
    <property name="geometry">
     <rect>
      <x>660</x>
-     <y>670</y>
+     <y>650</y>
      <width>41</width>
      <height>22</height>
     </rect>
@@ -708,11 +632,11 @@
     <number>99</number>
    </property>
   </widget>
-  <widget class="QCheckBox" name="checkBox_4">
+  <widget class="QCheckBox" name="checkBox_answ_3">
    <property name="geometry">
     <rect>
      <x>720</x>
-     <y>670</y>
+     <y>650</y>
      <width>131</width>
      <height>21</height>
     </rect>
@@ -727,21 +651,21 @@
     <string>Правильный</string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="textEdit_4">
+  <widget class="QTextEdit" name="textEdit_answ_3">
    <property name="geometry">
     <rect>
      <x>840</x>
-     <y>670</y>
+     <y>650</y>
      <width>271</width>
      <height>31</height>
     </rect>
    </property>
   </widget>
-  <widget class="QLabel" name="label_18">
+  <widget class="QLabel" name="label_answ_4">
    <property name="geometry">
     <rect>
      <x>570</x>
-     <y>710</y>
+     <y>690</y>
      <width>141</width>
      <height>21</height>
     </rect>
@@ -756,11 +680,11 @@
     <string>Тип ответа</string>
    </property>
   </widget>
-  <widget class="QSpinBox" name="spinBox_14">
+  <widget class="QSpinBox" name="spinBox_answ_4">
    <property name="geometry">
     <rect>
      <x>660</x>
-     <y>710</y>
+     <y>690</y>
      <width>41</width>
      <height>22</height>
     </rect>
@@ -772,11 +696,11 @@
     <number>99</number>
    </property>
   </widget>
-  <widget class="QCheckBox" name="checkBox_5">
+  <widget class="QCheckBox" name="checkBox_answ_4">
    <property name="geometry">
     <rect>
      <x>720</x>
-     <y>710</y>
+     <y>690</y>
      <width>131</width>
      <height>21</height>
     </rect>
@@ -791,21 +715,21 @@
     <string>Правильный</string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="textEdit_5">
+  <widget class="QTextEdit" name="textEdit_answ_4">
    <property name="geometry">
     <rect>
      <x>840</x>
-     <y>710</y>
+     <y>690</y>
      <width>271</width>
      <height>31</height>
     </rect>
    </property>
   </widget>
-  <widget class="QLabel" name="label_19">
+  <widget class="QLabel" name="label_answ_5">
    <property name="geometry">
     <rect>
      <x>570</x>
-     <y>750</y>
+     <y>730</y>
      <width>141</width>
      <height>21</height>
     </rect>
@@ -820,11 +744,11 @@
     <string>Тип ответа</string>
    </property>
   </widget>
-  <widget class="QSpinBox" name="spinBox_15">
+  <widget class="QSpinBox" name="spinBox_answ_5">
    <property name="geometry">
     <rect>
      <x>660</x>
-     <y>750</y>
+     <y>730</y>
      <width>41</width>
      <height>22</height>
     </rect>
@@ -836,11 +760,11 @@
     <number>99</number>
    </property>
   </widget>
-  <widget class="QCheckBox" name="checkBox_6">
+  <widget class="QCheckBox" name="checkBox_answ_5">
    <property name="geometry">
     <rect>
      <x>720</x>
-     <y>750</y>
+     <y>730</y>
      <width>131</width>
      <height>21</height>
     </rect>
@@ -855,21 +779,21 @@
     <string>Правильный</string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="textEdit_6">
+  <widget class="QTextEdit" name="textEdit_answ_5">
    <property name="geometry">
     <rect>
      <x>840</x>
-     <y>750</y>
+     <y>730</y>
      <width>271</width>
      <height>31</height>
     </rect>
    </property>
   </widget>
-  <widget class="QLabel" name="label_20">
+  <widget class="QLabel" name="label_answ_6">
    <property name="geometry">
     <rect>
      <x>570</x>
-     <y>790</y>
+     <y>770</y>
      <width>141</width>
      <height>21</height>
     </rect>
@@ -884,11 +808,11 @@
     <string>Тип ответа</string>
    </property>
   </widget>
-  <widget class="QSpinBox" name="spinBox_16">
+  <widget class="QSpinBox" name="spinBox_answ_6">
    <property name="geometry">
     <rect>
      <x>660</x>
-     <y>790</y>
+     <y>770</y>
      <width>41</width>
      <height>22</height>
     </rect>
@@ -900,11 +824,11 @@
     <number>99</number>
    </property>
   </widget>
-  <widget class="QCheckBox" name="checkBox_7">
+  <widget class="QCheckBox" name="checkBox_answ_6">
    <property name="geometry">
     <rect>
      <x>720</x>
-     <y>790</y>
+     <y>770</y>
      <width>131</width>
      <height>21</height>
     </rect>
@@ -919,21 +843,21 @@
     <string>Правильный</string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="textEdit_7">
+  <widget class="QTextEdit" name="textEdit_answ_6">
    <property name="geometry">
     <rect>
      <x>840</x>
-     <y>790</y>
+     <y>770</y>
      <width>271</width>
      <height>31</height>
     </rect>
    </property>
   </widget>
-  <widget class="QLabel" name="label_21">
+  <widget class="QLabel" name="label_answ_7">
    <property name="geometry">
     <rect>
      <x>570</x>
-     <y>830</y>
+     <y>810</y>
      <width>141</width>
      <height>21</height>
     </rect>
@@ -948,11 +872,11 @@
     <string>Тип ответа</string>
    </property>
   </widget>
-  <widget class="QSpinBox" name="spinBox_17">
+  <widget class="QSpinBox" name="spinBox_answ_7">
    <property name="geometry">
     <rect>
      <x>660</x>
-     <y>830</y>
+     <y>810</y>
      <width>41</width>
      <height>22</height>
     </rect>
@@ -964,11 +888,11 @@
     <number>99</number>
    </property>
   </widget>
-  <widget class="QCheckBox" name="checkBox_8">
+  <widget class="QCheckBox" name="checkBox_answ_7">
    <property name="geometry">
     <rect>
      <x>720</x>
-     <y>830</y>
+     <y>810</y>
      <width>131</width>
      <height>21</height>
     </rect>
@@ -983,21 +907,21 @@
     <string>Правильный</string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="textEdit_8">
+  <widget class="QTextEdit" name="textEdit_answ_7">
    <property name="geometry">
     <rect>
      <x>840</x>
-     <y>830</y>
+     <y>810</y>
      <width>271</width>
      <height>31</height>
     </rect>
    </property>
   </widget>
-  <widget class="QLabel" name="label_22">
+  <widget class="QLabel" name="label_answ_8">
    <property name="geometry">
     <rect>
      <x>570</x>
-     <y>870</y>
+     <y>850</y>
      <width>141</width>
      <height>21</height>
     </rect>
@@ -1012,11 +936,11 @@
     <string>Тип ответа</string>
    </property>
   </widget>
-  <widget class="QSpinBox" name="spinBox_18">
+  <widget class="QSpinBox" name="spinBox_answ_8">
    <property name="geometry">
     <rect>
      <x>660</x>
-     <y>870</y>
+     <y>850</y>
      <width>41</width>
      <height>22</height>
     </rect>
@@ -1028,11 +952,11 @@
     <number>99</number>
    </property>
   </widget>
-  <widget class="QCheckBox" name="checkBox_9">
+  <widget class="QCheckBox" name="checkBox_answ_8">
    <property name="geometry">
     <rect>
      <x>720</x>
-     <y>870</y>
+     <y>850</y>
      <width>131</width>
      <height>21</height>
     </rect>
@@ -1047,11 +971,11 @@
     <string>Правильный</string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="textEdit_9">
+  <widget class="QTextEdit" name="textEdit_answ_8">
    <property name="geometry">
     <rect>
      <x>840</x>
-     <y>870</y>
+     <y>850</y>
      <width>271</width>
      <height>31</height>
     </rect>
@@ -1101,6 +1025,32 @@
    </property>
    <property name="text">
     <string>Очистить</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_5">
+   <property name="geometry">
+    <rect>
+     <x>1000</x>
+     <y>910</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Ок</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_6">
+   <property name="geometry">
+    <rect>
+     <x>610</x>
+     <y>480</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Удалить</string>
    </property>
   </widget>
  </widget>
